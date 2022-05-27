@@ -127,3 +127,79 @@ nav::after {
 #search-form input[type=submit]:hover, #sendjobs input[type=submit]:hover {
 	background-color: #2B79EB;
 }
+
+/* Planos container */
+#plans-container {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#plans-container h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#plans-container .p-center {
+    margin-bottom: 60px;
+}
+
+.plans-box {
+    display: inline-block;
+    width: 31%;
+    padding: 0 1%;
+    text-align: left;
+}
+.plans-box img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.plans-box h4 {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.plans-box h4 a {
+    text-decoration: none;
+    color: #666;
+}
+
+.plans-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.plans-box::before,
+.plans-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(60% + 35px);
+    background-color: #fff;
+    transition: transform .5s .25
+    ease-in;
+    z-index: -1;
+}
+
+.plans-box::before {
+    top: 0;
+    clip-path: polygon(
+    0 0, 100% 0, 100% 45% 0% 100%);
+    transform: translateY(-100%);
+}
+
+.plans-box::after{
+    bottom: 0;
+    clip-path: polygon(
+    0 55%, 100% 0, 100% 100%, 0% 100%);
+}
